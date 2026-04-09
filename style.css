@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(-45deg, #141E30, #243B55, #0f2027, #2c5364);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.app{
+    width:360px;
+    text-align:center;
+}
+
+.title{
+    color:white;
+    margin-bottom:15px;
+}
+
+/* Search */
+.search{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.search input{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+}
+
+.search button{
+    padding:10px;
+    border:none;
+    border-radius:12px;
+    background:#ffffff30;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.search button:hover{
+    background:#00c6ff;
+}
+
+/* Card */
+.card{
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.15);
+    padding:25px;
+    border-radius:25px;
+    color:white;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.main-weather{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.main-weather img{
+    width:80px;
+}
+
+#temp{
+    font-size:55px;
+    font-weight:bold;
+}
+
+.condition{
+    margin:10px 0;
+    font-size:18px;
+}
+
+/* Details */
+.details{
+    display:flex;
+    margin-top:20px;
+}
+
+.box{
+    flex:1;
+    margin:5px;
+    padding:12px;
+    border-radius:18px;
+    background: rgba(255,255,255,0.2);
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:scale(1.1);
+    background:#00c6ff;
+}
+
+/* Loading */
+.loading{
+    color:white;
+}
+
+.hidden{
+    display:none;
+}
+
+.forecast{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+.day{
+    flex:1;
+    margin:5px;
+    padding:10px;
+    border-radius:15px;
+    background: rgba(255,255,255,0.2);
+    text-align:center;
+}

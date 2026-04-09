@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌦️ SkyCast</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <h1 class="title">🌦️ SkyView</h1>
+
+    <div class="search">
+        <input type="text" id="cityInput" placeholder="🔍 Enter city...">
+        <button onclick="getWeather()">🔎</button>
+        <button onclick="getLocationWeather()">📍</button>
+    </div>
+
+    <div id="loading" class="loading hidden">⏳ Loading weather...</div>
+
+    <div id="weatherInfo" class="card hidden">
+
+        <h2 id="city">📍 City</h2>
+        <p id="date">📅 Date</p>
+
+        <div class="main-weather">
+            <img id="icon">
+            <h1 id="temp">--°C</h1>
+        </div>
+
+        <p id="condition" class="condition">☁️ Condition</p>
+
+        <div class="details">
+            <div class="box">
+                💧 <p>Humidity</p>
+                <span id="humidity"></span>%
+            </div>
+
+            <div class="box">
+                🌬️ <p>Wind</p>
+                <span id="wind"></span> km/h
+            </div>
+        </div>
+
+        <div id="forecast" class="forecast hidden">
+
+    <div class="day">
+        <p>🌤️ Tomorrow</p>
+        <span id="day1"></span>
+    </div>
+
+    <div class="day">
+        <p>⛅ Day After</p>
+        <span id="day2"></span>
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
